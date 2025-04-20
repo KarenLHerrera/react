@@ -22,7 +22,8 @@ const Contador = () => {
         <div>{contador}</div>
         <button onClick={aumentar}>sumar</button><button onClick={restar}>restar</button>
         <br /><br /><br />
-        <button onClick={handleMostrar}>Mostrar Mensaje</button>
+        { !mensaje&& <button onClick={handleMostrar}>Mostrar Mensaje</button>}
+        
         { mensaje && <div>
         <h3>Hola Soy un Mensaje a mostrar</h3>
         <button onClick={handleOcultar}>Ocultar</button></div>
